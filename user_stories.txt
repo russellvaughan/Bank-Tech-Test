@@ -1,0 +1,16 @@
+As a user, 
+So that I can keep my money in a safe place
+I would like to be able to deposit money to my account
+
+As a user,
+So that I can have access to my money
+I would like to be able to withdraw my money.
+
+As a user
+So that I can keep track of my money
+I would like to a statment that shows, (date, amount, balance)
+
+As a user
+So that I can have a record of my money
+I would like to be able to build a statement.
+
