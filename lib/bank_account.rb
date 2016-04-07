@@ -16,4 +16,7 @@ class BankAccount
 		Transaction.new.process(Date.new, amount)
 	end
 
+	def print
+	end
+
 end
