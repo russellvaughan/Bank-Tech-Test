@@ -8,10 +8,12 @@ class BankAccount
 
 	def credit(amount)
 		@balance += amount
+		Transaction.new.process(Date.new, amount)
 	end
 
 	def debit(amount)
 		@balance -= amount
+		Transaction.new.process(Date.new, amount)
 	end
 
 end
