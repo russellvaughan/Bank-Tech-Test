@@ -3,6 +3,7 @@ describe BankAccount do
 	subject(:account) { described_class.new }
 
 	it { is_expected.to respond_to(:credit).with(1).argument }
+	it { is_expected.to respond_to(:debit).with(1).argument }
 	it { is_expected.to respond_to(:balance) }
 
 	describe "#credit" do 
@@ -11,4 +12,6 @@ describe BankAccount do
 			expect(account.balance).to eq(100)
 		end
 	end
+
+
 end

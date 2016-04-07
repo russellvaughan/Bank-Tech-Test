@@ -3,5 +3,5 @@ describe "Depositing Funds" do
 		account = BankAccount.new
 		account.credit(100)
 		expect(account.balance).to eq(100)
-	end  
+	end
 end
