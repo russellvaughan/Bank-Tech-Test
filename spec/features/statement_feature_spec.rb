@@ -5,7 +5,7 @@ describe "Requesting a Statement" do
 	it "prints a statemet" do 
 		account = BankAccount.new
 		allow(Time).to receive(:new){'10-01-2012'}
-		account.credit(100)
+		account.transaction(100)
 		expect(account.print).to eq("date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00")
 	end
 end	
