@@ -4,7 +4,6 @@ describe BankAccount do
 
 	
 	it { is_expected.to respond_to(:transaction).with(1).argument }
-	it { is_expected.to respond_to(:debit).with(1).argument }
 	it { is_expected.to respond_to(:balance) }
 
 	describe "#credit" do 
