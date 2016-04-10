@@ -10,6 +10,4 @@ class Transaction
 		@record=[date,amount]
 		@history.unshift(@record)
 	end 
-
-
 end

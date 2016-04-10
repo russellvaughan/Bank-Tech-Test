@@ -1,6 +1,6 @@
 describe BankAccount do 
 
-	subject(:account) { described_class.new(Transaction.new) }
+	subject(:account) { described_class.new(Transaction.new, Print.new) }
 
 	
 	it { is_expected.to respond_to(:transaction).with(1).argument }

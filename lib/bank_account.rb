@@ -2,8 +2,9 @@ class BankAccount
 
 	attr_reader :balance
 
-	def initialize(transaction)
+	def initialize(transaction, print)
 		@transaction = Transaction.new
+		@printer = Print.new
 		@balance = 0
 	end
 
@@ -13,7 +14,7 @@ class BankAccount
 	end
 
 	def print
-
+		@printer.record(@transaction.history)
 	end
 
 end

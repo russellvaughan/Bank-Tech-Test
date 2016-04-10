@@ -3,21 +3,34 @@ class Print
 	def initialize
 		@balance = 0
 		@statement = ''
+		@statement_header = "date || credit || debit || balance\n"
 	end
 
-	def record(transaction)
-		transaction.each do |transaction|
+	def record(transactions)
+		transactions.reverse.each do |transaction|
 			transaction.each_slice(2) do |date,amount|
-				@statement +=  "#{date} || #{format(amount) if amount > 0} || #{format(amount.abs) if amount < 0}|| #{format(@balance += amount)}\n"
+				@statement +=  "#{date} || #{credit(amount)}|| #{debit(amount)}|| #{balance(amount)}\n"
 			end
 		end
-		"date || credit || debit || balance\n" + @statement
+		@statement_header + @statement
 	end
 
 	private
 
-	def format(amount)
-	sprintf('%.2f', amount)
+	def format_number(amount)
+	sprintf('%.2f ', amount)
+	end
+
+	def credit(amount)
+	format_number(amount) if amount > 0
+	end
+
+	def debit(amount)
+	format_number(amount.abs) if amount < 0
+	end
+
+	def balance(amount)
+	format_number(@balance += amount).strip
 	end
 
 end
