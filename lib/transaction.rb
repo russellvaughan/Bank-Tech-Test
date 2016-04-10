@@ -2,7 +2,7 @@ class Transaction
 
 	attr_reader :history, :record
 
-	def initialize
+	def initialize()
 		@history = []
 	end
 
