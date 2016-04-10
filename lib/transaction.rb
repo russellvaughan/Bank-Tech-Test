@@ -12,5 +12,4 @@ class Transaction
 	end 
 
 
-
 end
